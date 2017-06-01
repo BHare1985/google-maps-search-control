@@ -1,0 +1,199 @@
+﻿
+.mapsearch-bar {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	text-align: left;
+	outline: none;
+	height: 29px;
+	width: 29px;
+	transition: height 0.5s, width 0.5s;
+}
+
+
+.mapsearch-bar input[type=checkbox] + label {
+	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAMUlEQVQ4y2NgYGD4j46BgAEbxqaWgWoG4NJEhGEDbQCR/sQZPqMGUMOAYZCQBjw3AgAjYx3/MtwokAAAAABJRU5ErkJggg==");
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-size: 16px;
+	height: 16px;
+	display: inline-block;
+	padding: 0 0 0 0;
+	cursor: pointer;
+	padding-right: 25px;
+	text-indent: 5px;
+
+	/*opacity: 0.2;*/
+}
+.mapsearch-bar input[type=checkbox]:checked + label {
+	opacity: 1;
+	-webkit-filter: none;
+	-moz-filter: none;
+	filter: none;
+}
+
+.mapsearch-input {
+	display: none;
+	box-sizing: border-box;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	border: none;
+	border-radius: 4px;
+	text-indent: 3px;
+	background-color: transparent;
+	cursor: text;
+	font-size: 14px;
+	font-weight: 300;
+	background-color: #fff;
+	padding: 0 27px 0 27px;
+	text-overflow: ellipsis;
+}
+
+.mapsearch-input:focus {
+	outline: none;
+	cursor: text;
+}
+
+.mapsearch-bar a {
+	width: 27px;
+	line-height: 27px;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: #000;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	display: block;
+}
+
+
+.mapsearch-search-icon {
+	position: absolute;
+	height: 100%;
+	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAA50lEQVQoz52SMQ6CQBREl9jQiAWaUJIQCz2A1lxBO70F17DxDN7AyoqEE1CphdFCezpCSIzgkAy6bmA1TvKa//9MdvevEG8ZYAEikIIcxCAAptCoC3agbGEP3CajIRkPYAZsYAEfhOydWPvQks0j6DWEd8CWMyu1GbEx11zLAwVIGPZSSrMt9LpxbigXcxatL+YL58ZyMWbR1xgH4A4ydW0BzaF6H0lrzmzUhsk9lnxVT+r1aSzItCnZ5R6rgAe4gjOPWtJYr9NpCrC4x0T6WRmPOqFRG1B/imodI+VxnF8D2qQGiL8DnrfTSjIa4bUdAAAAAElFTkSuQmCC");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 16px;
+	z-index: 10;
+	cursor: pointer;
+}
+
+.mapsearch-expanded {
+	width: 280px;
+	height: 44px;
+}
+
+.mapsearch-expanded .mapsearch-menu {
+	display: inline-block;
+}
+.mapsearch-expanded .mapsearch-input {
+	display: inline-block;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	line-height: 32px;
+}
+
+.mapsearch-infowindow-content > .placeIcon {
+	vertical-align: middle;
+	height: 20px;
+	width: 20px;
+	margin-right: 5px;
+	border: 1px #dcdcdc solid;
+	padding: 1px;
+}
+.mapsearch-infowindow-content > .placeName {
+	vertical-align: middle;
+	font-weight: bold;
+}
+
+/*
+============= menu
+*/
+
+.mapsearch-menu {
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+}
+
+
+.mapsearch-menu ul {
+	display: none;
+	margin-top: 77px;
+	user-select: none;
+	position: absolute;
+	top: -34px;
+	right: -1px;
+	min-width: 137px;
+}
+.mapsearch-menu ul:hover {
+	display: block;
+}
+.mapsearch-menu li {
+	background: white;
+	padding: 4px;
+	list-style: none;
+	border: 1px solid rgba(0, 0, 0, 0.298039);
+	margin-top: -1px;
+}
+
+.mapsearch-menu li:hover {
+	background: #eee;
+	cursor: pointer;
+}
+
+.mapsearch-menu input[type=checkbox],
+.mapsearch-menu input[type=radio] {
+	vertical-align: middle;
+	position: relative;
+	bottom: 1px;
+}
+
+.mapsearch-menu a.button {
+	display: inline-block;
+	user-select: none;
+	cursor: pointer;
+	height: 100%;
+	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAJ0lEQVQ4y2NgGDbgJBD/JxGfQDbgOBkGHB1mYXBi6IfBmdEwIB8AAEQSURX+8q0jAAAAAElFTkSuQmCC");
+	/*position: relative;*/
+}
+
+.mapsearch-menu a:focus + ul{
+	display: block;
+} 
+
+.mapsearch-menu a:active + ul {
+	display: block;
+}
+.mapsearch-menu:active .button {
+	display: inline-block;
+}
+
+/*
+============= misc
+*/
+
+.mapsearch-gmap-control {
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	box-shadow: rgba(0, 0, 0, 0.298039) 0 1px 4px -1px;
+	border-radius: 2px;
+	background-color: white;
+	margin: 10px;
+}
+
+.mapsearch-gmap-control a:hover {
+	background-color: rgb(235,235,235);
+}
+
+.mapsearch-input::-webkit-search-cancel-button {
+	-webkit-appearance: searchfield-cancel-button;
+	cursor: pointer;
+}
+
+.mapsearch-input::-ms-clear {
+	cursor: pointer;
+}
