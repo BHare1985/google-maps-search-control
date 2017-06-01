@@ -1,37 +1,15 @@
-## Welcome to GitHub Pages
+## Google Maps Search Control
 
-You can use the [editor on GitHub](https://github.com/BHare1985/google-maps-search-control/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Easy to install Google Map expandable search control that allows for [Google Maps Place Autocomplete](https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete) searches<br><br>
+![Demo](http://i.imgur.com/489S9Cf.gif)<br><br>
+### How to use
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Include the .js and .css files to your html.
+In JavaScript, send your map object to the init function:
 
 ```markdown
-Syntax highlighted code block
+var opts = { center: { lat: -33.8688, lng: 151.2195 }, zoom: 13 };
+var map = new google.maps.Map(document.getElementById('map'), opts);
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+MapSearch.init(map);
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/BHare1985/google-maps-search-control/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
